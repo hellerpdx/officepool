@@ -3,8 +3,10 @@ graphs of the weekly results.
 
 TODO: 
 
-Connect using requests
-pull down the data that is needed
-format the data
-try graphing using dimple
+* Connect using requests
+* pull down the data that is needed
+* format the data
+* try graphing using dimple
+
+
 
