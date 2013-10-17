@@ -3,11 +3,11 @@ graphs of the weekly results.
 
 TODO: 
 
-
+* ~~login to the the CBS Sportsline website and to league page~~
 * ~~pull down the data that is needed~~
 * figure out how to handle players with the same name
 * ~~format the data~~
-* export to a csv
+* ~~export to a csv~~
 * graphing using dimple.js
 
 ## User Variables
@@ -22,6 +22,11 @@ You must create a file called private.py and in it declare the following:
 save the file in the same directory as getscores.py
 
 I'm sure there is a better way to handle this - suggestions welcome!
+
+## Results.csv
+not included in public repository due to player names
+
+
 
 
 

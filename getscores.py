@@ -4,6 +4,7 @@
 from selenium import webdriver
 from collections import defaultdict
 from private import redirectURL, poolURL, userid, password
+import csv
 
 # start with week 1 and then increment in the goToNextWeek function
 week = 1
@@ -13,7 +14,6 @@ results = defaultdict(list)
 
 #open Firefox and go to login url
 browser = webdriver.Firefox()
-
 
 # login and then call function to gather points
 def loginInit():
@@ -52,8 +52,17 @@ def goToNextWeek():
 		getPoints()
 	else:
  		browser.close()
-		for key,value in results.iteritems():
-			print key,value
+		writeToCSV()
+
+def writeToCSV():
+	forlist = []
+	for i in results.items():
+		i[1].insert(0,str(i[0]))
+		forlist.append(i[1])
+	with open('results.csv','wb') as csvfile:
+		writer = csv.writer(csvfile, delimiter=',')
+		for i in forlist:
+			writer.writerow(i)
 
 loginInit()	
 
