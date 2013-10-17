@@ -1,5 +1,5 @@
-This is a little project to scrape weekly scores from my CBS Sportsline fantasy league and produce
-graphs of the weekly results. 
+This is a little project to scrape weekly scores from my CBS Sportsline office pool
+and produce graphs of the weekly results. 
 
 TODO: 
 
@@ -23,8 +23,6 @@ save the file in the same directory as getscores.py
 
 I'm sure there is a better way to handle this - suggestions welcome!
 
-## Results.csv
-not included in public repository due to player names
 
 
 
