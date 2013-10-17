@@ -6,18 +6,20 @@ TODO:
 
 * ~~pull down the data that is needed~~
 * figure out how to handle players with the same name
-* format the data
-* try graphing using dimple
+* ~~format the data~~
+* export to a csv
+* graphing using dimple.js
 
 ## User Variables
 
 You must create a file called private.py and in it declare the following:
 
-redirectURL = 
-This will be in the format 'http://www.cbssports.com/login?xurl=http://<leaguename>.football.cbssports.com/office-pool/standings/live/'
-poolURL = 'http://<leaguename>.football.cbssports.com/office-pool/standings/live/'
-userid = 'username'
-password = 'password'
+	redirectURL = 'http://www.cbssports.com/login?xurl=http://leaguename.football.cbssports.com/office-pool/standings/live/'
+	poolURL = 'http://leaguename.football.cbssports.com/office-pool/standings/live/'
+	userid = 'username'
+	password = 'password'
+
+save the file in the same directory as getscores.py
 
 I'm sure there is a better way to handle this - suggestions welcome!
 
