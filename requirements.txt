@@ -1,5 +1,11 @@
 beautifulsoup4==4.3.2
 lxml==3.2.3
+numpy==1.7.1
+pandas==0.12.0
+python-dateutil==2.1
+pytz==2013.7
 requests==2.0.0
 selenium==2.35.0
+six==1.4.1
+vincent==0.3.0
 wsgiref==0.1.2

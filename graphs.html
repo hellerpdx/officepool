@@ -1,0 +1,18 @@
+<div id="chartContainer">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v1.1.1.min.js"></script>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 960, 960);
+    d3.tsv("results.tsv", function (data) {
+      data = dimple.filterData(data, "Week", ["1", "2", "3", "4","5","6"])
+      var myChart = new dimple.chart(svg, data);
+	  myChart.setBounds(20, 450, 900, 205);	
+      var x = myChart.addCategoryAxis("x", "Week");
+      x.addOrderRule("Name");
+      myChart.addMeasureAxis("y", "Score");
+      myChart.addSeries("Name", dimple.plot.line);
+      myChart.addLegend(0, 10, 900, 600, "right");
+      myChart.draw();
+    });
+  </script>
+</div>

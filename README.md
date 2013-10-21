@@ -8,7 +8,7 @@ TODO:
 * figure out how to handle players with the same name
 * ~~format the data~~
 * ~~export to a csv~~
-* graphing using dimple.js
+* graphing using [vincent](https://github.com/wrobstory/vincent)
 
 ## User Variables
 

@@ -6,6 +6,7 @@ from collections import defaultdict
 from private import redirectURL, poolURL, userid, password
 import csv
 
+weekscores = []
 # start with week 1 and then increment in the goToNextWeek function
 week = 1
 
@@ -38,7 +39,7 @@ def getPoints():
 	for name, score in weekTotal:
 		a = name.text
 		b = score.text
-		results[a].append(int(b))
+		weekscores.append([week,a,b])
 	
 	goToNextWeek()
 	
@@ -48,20 +49,16 @@ def goToNextWeek():
 	global week
 	if week < 6:
 		week += 1
-		browser.get(poolURL+str(week))
+		browser .get(poolURL+str(week))
 		getPoints()
 	else:
  		browser.close()
 		writeToCSV()
 
 def writeToCSV():
-	forlist = []
-	for i in results.items():
-		i[1].insert(0,str(i[0]))
-		forlist.append(i[1])
-	with open('results.csv','wb') as csvfile:
-		writer = csv.writer(csvfile, delimiter=',')
-		for i in forlist:
+	with open('results.tsv','wb') as tsvfile:
+		writer = csv.writer(tsvfile, delimiter='\t')
+		for i in weekscores:
 			writer.writerow(i)
 
 loginInit()	
