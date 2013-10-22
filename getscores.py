@@ -47,7 +47,7 @@ def getPoints():
 # need to add a date check in here so it works automatically
 def goToNextWeek():
 	global week
-	if week < 6:
+	if week < 7:
 		week += 1
 		browser .get(poolURL+str(week))
 		getPoints()
@@ -55,9 +55,11 @@ def goToNextWeek():
  		browser.close()
 		writeToCSV()
 
+# take all of the scores and put them in a tab delimted file
 def writeToCSV():
 	with open('results.tsv','wb') as tsvfile:
 		writer = csv.writer(tsvfile, delimiter='\t')
+		writer.writerow(["Week", "Name", "Score"])
 		for i in weekscores:
 			writer.writerow(i)
 

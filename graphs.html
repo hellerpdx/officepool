@@ -4,7 +4,7 @@
   <script type="text/javascript">
     var svg = dimple.newSvg("#chartContainer", 960, 960);
     d3.tsv("results.tsv", function (data) {
-      data = dimple.filterData(data, "Week", ["1", "2", "3", "4","5","6"])
+      data = dimple.filterData(data, "Week", ["1", "2", "3", "4","5","6","7"])
       var myChart = new dimple.chart(svg, data);
 	  myChart.setBounds(20, 450, 900, 205);	
       var x = myChart.addCategoryAxis("x", "Week");
