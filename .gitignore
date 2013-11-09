@@ -39,3 +39,7 @@ nosetests.xml
 private.py
 results.csv
 results.tsv
+weekscores.csv
+
+# database stuff
+*.rdb
